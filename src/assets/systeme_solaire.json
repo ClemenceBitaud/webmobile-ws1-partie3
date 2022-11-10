@@ -1,0 +1,58 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quel est l'âge estimé du système solaire ?",
+      "answers" : [
+        {
+          "answer": "4.5 millions d'années",
+          "valid": false
+        },
+        {
+          "answer": "4.5 milliards d'années",
+          "valid": true
+        },
+        {
+          "answer": "45 milliards d'années",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "En astronomie, qu'est-ce qu'une étoile ?",
+      "answers" : [
+        {
+          "answer": "Un astre qui émet de la lumière",
+          "valid": true
+        },
+        {
+          "answer": "Un astre qui émet de la chaleur",
+          "valid": false
+        },
+        {
+          "answer": "Un astre de grande taille",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Quand Neil Amrstong et Buzz Aldrin ont-ils marché sur la Lune ?",
+      "answers" : [
+        {
+          "answer": "20 juillet 1967",
+          "valid": false
+        },
+        {
+          "answer": "20 juillet 1968",
+          "valid": false
+        },
+        {
+          "answer": "20 juillet 1969",
+          "valid": true
+        }
+      ]
+    }
+  ]
+}

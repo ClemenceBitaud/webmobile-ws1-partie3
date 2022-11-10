@@ -1,0 +1,58 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "De quelle couleur sont les girafes ?",
+      "answers" : [
+        {
+          "answer": "Bleu et rose",
+          "valid": false
+        },
+        {
+          "answer": "Jaune et marron",
+          "valid": true
+        },
+        {
+          "answer": "Orange et vert",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Combien de pattes possèdent les insectes ?",
+      "answers" : [
+        {
+          "answer": "4",
+          "valid": false
+        },
+        {
+          "answer": "6",
+          "valid": true
+        },
+        {
+          "answer": "8",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Quel nom désigne l'elevage des abeilles ?",
+      "answers" : [
+        {
+          "answer": "L'apiculture",
+          "valid": true
+        },
+        {
+          "answer": "L'horticulture",
+          "valid": false
+        },
+        {
+          "answer": "La miellerie",
+          "valid": false
+        }
+      ]
+    }
+  ]
+}

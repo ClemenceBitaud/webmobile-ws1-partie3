@@ -1,0 +1,58 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quelle est la signification étymologique du mot dinosaure ?",
+      "answers" : [
+        {
+          "answer": "Terrible lézard",
+          "valid": true
+        },
+        {
+          "answer": "Monstre géant",
+          "valid": false
+        },
+        {
+          "answer": "Animal préhistorique",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Quand les premiers dinosaures seraient-ils apparus sur Terre ?",
+      "answers" : [
+        {
+          "answer": "Il y a 20 millions d'années",
+          "valid": false
+        },
+        {
+          "answer": "Il y a 62 millions d'années",
+          "valid": false
+        },
+        {
+          "answer": "Il y a 230 millions d'années",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Laquelle de ces périodes géologiques est la plus récente ?",
+      "answers" : [
+        {
+          "answer": "Crétacé",
+          "valid": true
+        },
+        {
+          "answer": "Le Trias",
+          "valid": false
+        },
+        {
+          "answer": "Le Jurassique",
+          "valid": true
+        }
+      ]
+    }
+  ]
+}

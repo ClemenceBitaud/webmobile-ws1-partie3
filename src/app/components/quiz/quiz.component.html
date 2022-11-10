@@ -1,1 +1,54 @@
-<p>quiz works!</p>
+<div style="display: flex;flex-direction: column; align-items: center">
+  <h1>Choisissez un thème !</h1>
+  <div style="display: flex; flex-direction: column; width: 30%">
+    <button (click)="chooseAnimaux()">Animaux</button>
+    <button (click)="chooseDinosaure()">Dinosaure</button>
+    <button (click)="chooseSystemeSolaire()">Système Solaire</button>
+  </div>
+
+  <div *ngIf="isAnimalsQuestions">
+    <form [formGroup]="animalForm" (ngSubmit)="submitAnimals()">
+      <div *ngFor="let animalQuestion of animalsQuestions">
+        <label>{{animalQuestion.question}}</label>
+        <div *ngFor="let answer of animalQuestion.answers; let i=index">
+          <input formArrayName="answers" type="checkbox" [value]="answer.valid" (change)="onCheckChangeAnimal($event)">
+          {{answer.answer}}
+        </div>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div *ngIf="isDinosaureQuestions">
+    <form [formGroup]="dinosaureForm" (ngSubmit)="submitDinosaures()">
+      <div *ngFor="let dinosaureQuestion of dinosaureQuestions">
+        <label>{{dinosaureQuestion.question}}</label>
+        <div *ngFor="let answer of dinosaureQuestion.answers; let i=index">
+          <input formArrayName="answers" type="checkbox" [value]="answer.valid" (change)="onCheckChangeDinosaure($event)">
+          {{answer.answer}}
+        </div>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div *ngIf="isSystemeSolaireQuestions">
+    <form [formGroup]="systemeSolaireForm" (ngSubmit)="submitSystemeSolaire()">
+      <div *ngFor="let systemeSolaireQuestion of systemeSolaireQuestions">
+        <label>{{systemeSolaireQuestion.question}}</label>
+        <div *ngFor="let answer of systemeSolaireQuestion.answers; let i=index">
+          <input formArrayName="answers" type="checkbox" [value]="answer.valid" (change)="onCheckChangeSystemeSolaire($event)">
+          {{answer.answer}}
+        </div>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div *ngIf="afficherScore">
+    <p>Votre score : {{score}} / 3</p>
+    <button (click)="resetForm()">Reset</button>
+  </div>
+</div>
+
+
