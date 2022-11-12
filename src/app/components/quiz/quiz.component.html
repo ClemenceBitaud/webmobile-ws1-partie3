@@ -1,12 +1,12 @@
 <div style="display: flex;flex-direction: column; align-items: center">
   <h1>Choisissez un thème !</h1>
   <div style="display: flex; flex-direction: column; width: 30%">
-    <button (click)="chooseAnimaux()">Animaux</button>
-    <button (click)="chooseDinosaure()">Dinosaure</button>
-    <button (click)="chooseSystemeSolaire()">Système Solaire</button>
+    <button color="primary" mat-raised-button (click)="chooseAnimaux()" class="button">Animaux</button>
+    <button color="primary" mat-raised-button (click)="chooseDinosaure()" class="button">Dinosaure</button>
+    <button color="primary" mat-raised-button (click)="chooseSystemeSolaire()" class="button">Système Solaire</button>
   </div>
 
-  <div *ngIf="isAnimalsQuestions">
+  <div *ngIf="isAnimalsQuestions" class="questions">
     <form [formGroup]="animalForm" (ngSubmit)="submitAnimals()">
       <div *ngFor="let animalQuestion of animalsQuestions">
         <label>{{animalQuestion.question}}</label>
@@ -15,11 +15,11 @@
           {{answer.answer}}
         </div>
       </div>
-      <button>Submit</button>
+      <button color="primary" mat-raised-button class="button">Submit</button>
     </form>
   </div>
 
-  <div *ngIf="isDinosaureQuestions">
+  <div *ngIf="isDinosaureQuestions" class="questions">
     <form [formGroup]="dinosaureForm" (ngSubmit)="submitDinosaures()">
       <div *ngFor="let dinosaureQuestion of dinosaureQuestions">
         <label>{{dinosaureQuestion.question}}</label>
@@ -28,11 +28,11 @@
           {{answer.answer}}
         </div>
       </div>
-      <button>Submit</button>
+      <button color="primary" mat-raised-button class="button">Submit</button>
     </form>
   </div>
 
-  <div *ngIf="isSystemeSolaireQuestions">
+  <div *ngIf="isSystemeSolaireQuestions" class="questions">
     <form [formGroup]="systemeSolaireForm" (ngSubmit)="submitSystemeSolaire()">
       <div *ngFor="let systemeSolaireQuestion of systemeSolaireQuestions">
         <label>{{systemeSolaireQuestion.question}}</label>
@@ -41,13 +41,13 @@
           {{answer.answer}}
         </div>
       </div>
-      <button>Submit</button>
+      <button color="primary" mat-raised-button class="button">Submit</button>
     </form>
   </div>
 
   <div *ngIf="afficherScore">
     <p>Votre score : {{score}} / 3</p>
-    <button (click)="resetForm()">Reset</button>
+    <button color="primary" mat-raised-button (click)="resetForm()">Reset</button>
   </div>
 </div>
 
